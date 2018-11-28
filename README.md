@@ -1,24 +1,26 @@
-# README
+## Requirements
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Ruby 2.4.1
+- Rails 5.1.6
 
-Things you may want to cover:
+## Configuration
 
-* Ruby version
+- git clone `git@github.com:bhiseweb/FilterUnit.git`
 
-* System dependencies
+- cd `FilterUnit`
 
-* Configuration
+- run `bundle install`
 
-* Database creation
+- setup `config/database.yml` according your db configuration.
 
-* Database initialization
+- run `rake db:create`
 
-* How to run the test suite
+- Restore DB dump `bundle exec rails db < $SQL_FILE`
 
-* Services (job queues, cache servers, search engines, etc.)
+- run `rake db:schema:load`
 
-* Deployment instructions
+- run `rake db:migrate`
 
-* ...
+- run `rake db:seed`
+
+- run server `rails s`
